@@ -1,0 +1,3 @@
+[submodule "cpp-mem"]
+	path = cpp-mem
+	url = https://github.com/trmrsh/cpp-mem.git
