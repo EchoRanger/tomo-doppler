@@ -23,9 +23,10 @@ doppler = Extension(
     undef_macros = ['USE_NUMARRAY'],
     include_dirs = include_dirs,
     libraries = ['fftw3'],
-    extra_compile_args=['-fopenmp'],
+    extra_compile_args=['-std=c++20', '-fopenmp'],
     extra_link_args=['-fopenmp'],
     sources = [os.path.join('trm', 'doppler', 'doppler.cc'),
+               os.path.join('trm', 'doppler', 'dopp.cc'),
                os.path.join('cpp-mem', 'src', 'memsys.cc')]
 )
 
@@ -34,6 +35,7 @@ setup(name='trm.doppler',
       packages = ['trm', 'trm.doppler', 'trm.doppler.scripts'],
       python_requires = '>=3.14',
       install_requires = ['numpy', 'scipy', 'astropy', 'matplotlib'],
+      extras_require = {'test': ['pytest']},
       ext_modules=[doppler,],
       entry_points={
           'console_scripts' : [

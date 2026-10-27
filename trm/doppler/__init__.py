@@ -1,4 +1,4 @@
-# Licensed under a 3-clause BSD style license - see LICENSE.rst
+# Licensed under the GNU GPL v3 - see LICENSE
 
 """
 Doppler tomography
